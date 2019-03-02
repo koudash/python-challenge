@@ -1,5 +1,5 @@
 """
-This is codes for PyPoll
+Here are codes for PyPoll
 """
 # Modules
 import os

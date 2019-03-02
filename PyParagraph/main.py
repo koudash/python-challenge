@@ -1,5 +1,5 @@
 """
-This is codes for PyParagraph
+Here are codes for PyParagraph
 """
 
 def passage_analysis(filename):
