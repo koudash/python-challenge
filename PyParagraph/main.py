@@ -33,12 +33,16 @@ def passage_analysis(filename):
         # Use "contraction_count" to calculate the amounts of contraction word in the passage
         contraction_count = len(re.split("[A-z]+['][A-z]+", content)) - 1
 
-        # Note that the above syntax also split apart hyphen-connected word, which is generally considered as intact as well
+        # Note that the above syntax split apart hyphen-connected word, which is generally considered as intact as well
         # Use "hyphen_count" to calculate the amounts of hyphen-connected word in the passage
         hyphen_count = len(re.split("[A-z]+[-][A-z]+", content)) - 1
+    
+        # Note that the above syntax also split apart large numbers with comma, which is generally considered as intact
+        # Use "comma_in_number_count" to calculate the amounts of commas in large numbers in the passage
+        comma_in_number_count = len(re.split("[0-9]+[,][0-9]+", content)) - 1
 
         # Calculate Word counts and store in variant "word_count"
-        word_count = len(words) - contraction_count - hyphen_count
+        word_count = len(words) - contraction_count - hyphen_count - comma_in_number_count
         
         # Loop through "words" list
         for word in words:
