@@ -24,7 +24,7 @@ def passage_analysis(filename):
 
         # Words are those flanked by any non-alphanumeric character(s) in passages
         words = re.split("\W+", content)
-        # Note that the above syntax might introduce at most two "" at both beginning and ending of passages, e.g. start and end with quotation marks
+        # Note that the above syntax might introduce at most two (could be more than two if passages have more than one paragraph) "" at both beginning and ending of passages, e.g. start and end with quotation marks
         # Use while statement to remove "" from "words" list
         while "" in words:
             words.remove("")
