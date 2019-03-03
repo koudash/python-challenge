@@ -32,7 +32,7 @@ with open(budget_path, newline="") as csvfile:
     # Loop through "profit_losses" list
     for i in range(len(profit_losses)):
 
-        # Determine if current iterated value is the last one from "profit_losses" list and if true ...
+        # Determine if current iterated value is not the last one from "profit_losses" list and if true ...
         if i != len(profit_losses) - 1:
 
             # Add changes in "Profit/Losses" amount between two adjacent months to "change" list
