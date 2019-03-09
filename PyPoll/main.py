@@ -61,7 +61,7 @@ with open(election_path, newline="") as csvfile:
     print(f"Total Votes: {len(voter_id)}")
     print("----------------------------")
     # Print the candidate voting results in descending order by votes
-    # Note that name in "candidate_sort_by_count" can also be found as key in dictionary "Cound_result"
+    # Note that name in "candidate_sort_by_count" can also be found as key in dictionary "Count_result"
     for name in candidate_sort_by_count:
         print(str(name) + ': ' + "{0:.3%}".format(Count_result[name] / len(voter_id)) + " (" + str(Count_result[name]) + ")")
     print("----------------------------")
