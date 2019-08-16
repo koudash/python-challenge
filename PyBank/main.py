@@ -45,7 +45,8 @@ with open(budget_path, newline="") as csvfile:
     print(f"Total Months: {len(date)}")
     # The net total amount of "Profit/Losses" over the entire period is the sum of values stored in "profit_losses" list
     print(f"Total: ${sum(profit_losses)}")
-    # The average of the changes in "Profit/Losses" over the entire period is the sum of element values in list "change" divided by its list length
+    # The average of the changes in "Profit/Losses" over the entire period is the sum of element values in list "change" divided by 
+        # its list length
     print(f"Average Change: ${round(sum(change) / len(change), 2)}")
     # A financial record should have the same index for its values appended to "date" and "profit_losses" lists
     # Note that the index "i" in "date" and "profit_losses" is reflected as "i-1" for index in "change" list

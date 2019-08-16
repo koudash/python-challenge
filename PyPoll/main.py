@@ -51,7 +51,8 @@ with open(election_path, newline="") as csvfile:
                 # Add candidate's votes to dictionary "Count_result" after looping through the long candidate count list
                 Count_result[name] = name_count
     
-    # Sort the dictionary "Count_result" by values in descending order and store the sorted keys (candidate's name) in a new list called "candidate_sorted_by_count"
+    # Sort the dictionary "Count_result" by values in descending order and store the sorted keys (candidate's name) in a new list 
+        # called "candidate_sorted_by_count"
     candidate_sort_by_count = sorted(Count_result, key=Count_result.get, reverse=True)
 
     # Analysis output
